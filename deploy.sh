@@ -1,0 +1,22 @@
+gcloud compute instances create-with-container instance-20240520-100522 \
+    --project=fifth-subject-279711 \
+    --zone=us-central1-c \
+    --machine-type=e2-custom-micro-1024 \
+    --network-interface=network-tier=PREMIUM,stack-type=IPV4_ONLY,subnet=default \
+    --maintenance-policy=MIGRATE \
+    --provisioning-model=STANDARD \
+    --service-account=1045525176084-compute@developer.gserviceaccount.com \
+    --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append \
+    --tags=http-server,https-server \
+    --image=projects/cos-cloud/global/images/cos-stable-113-18244-85-5 \
+    --boot-disk-size=10GB \
+    --boot-disk-type=pd-balanced \
+    --boot-disk-device-name=instance-20240520-100522 \
+    --container-image=autohyde \
+    --container-restart-policy=always \
+    --container-command=python\ \
+app.py \
+    --no-shielded-secure-boot \
+    --shielded-vtpm \
+    --shielded-integrity-monitoring \
+    --labels=goog-ec-src=vm_add-gcloud,container-vm=cos-stable-113-18244-85-5

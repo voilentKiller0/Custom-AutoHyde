@@ -1,0 +1,11 @@
+langchain
+python-dotenv
+chromadb
+langchain-cli
+llama-index
+langchain-experimental
+hdbscan
+retry
+google-cloud-aiplatform
+Flask
+Flask-Cors
