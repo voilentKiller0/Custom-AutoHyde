@@ -132,7 +132,6 @@ def process_json():
                     'expiry': time.time()
                 }
             }
-        print (history)
         response = chain.invoke({
             'chat_history': history,
             'ref_documents': hypothetical_docs,
