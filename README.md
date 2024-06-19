@@ -27,12 +27,17 @@ AutoHyde RAG is a sophisticated retrieval-augmented generation (RAG) system that
 
 ### Steps
 
-1. **Create a virtual environment:**
+1. **Clone the repository**
+   ```sh
+   git clone https://github.com/voilentKiller0/Custom-AutoHyde.git
+   ```
+
+2. **Create a virtual environment:**
    ```sh
    python -m venv venv
    ```
 
-2. **Activate the virtual environment:**
+3. **Activate the virtual environment:**
    - **For Windows:**
      ```sh
      venv\Scripts\activate
@@ -42,12 +47,12 @@ AutoHyde RAG is a sophisticated retrieval-augmented generation (RAG) system that
      source venv/bin/activate
      ```
 
-3. **Install the required packages:**
+4. **Install the required packages:**
    ```sh
    pip install -r requirements.txt
    ```
 
-4. **Run the backend server:**
+5. **Run the backend server:**
    ```sh
    python app.py
    ```
@@ -85,7 +90,8 @@ To interact with the server, send a POST request to `http://0.0.0.0:5000` with t
 6. **Generate Answer:**
    Use the generated hypothetical documents to answer the user's query.
 
-![alt text](image-1.png)
+![image](https://github.com/voilentKiller0/Custom-AutoHyde/assets/55941465/dc905742-60ae-45e5-9b9b-dbd844ecbe04)
+
 
 ## Example Output
 
@@ -103,14 +109,36 @@ To interact with the server, send a POST request to `http://0.0.0.0:5000` with t
   "response": "**Step 1: Choose a domain name**\n\nThe domain name of your URL shortening service should be short, easy to remember, and relevant to the service you are providing.\n\n**Step 2: Set up a web server**\n\nThe web server that hosts your URL shortening service should be reliable and able to handle a large number of requests.\n\n**Step 3: Create a database**\n\nThe database that stores the short URLs and their corresponding long URLs should be able to handle a large number of requests and should be able to scale as your service grows.\n\n**Step 4: Develop a short URL generation algorithm**\n\nThe short URL generation algorithm should be efficient and should generate short URLs that are easy to remember and type.\n\n**Step 5: Implement a tracking system**\n\nThe tracking system should track the number of clicks on each short URL. This information can be used to measure the effectiveness of your URL shortening service and to identify which links are most popular."
 }
 ```
-
-### Output Example Image
-![Example Output](example_output.png)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ---
+### Request
+```json
+{
+  "uuid" : "1212",
+  "query" : "Design a Real-Time Chat Application"
+}
+```
 
-You can customize the content further based on your specific requirements. Also, make sure to include an actual image file named `example_output.png` in your project directory for the output example section.
+### Response
+```json
+{
+  "response": "**Step 1: Define the requirements**\n\nThe first step is to define the requirements for your chat application. This includes things like:\n\n* The number of users that the application will need to support\n* The types of messages that the application will need to handle (text, images, files, etc.)\n* The security features that the application will need\n* The user experience that you want to provide\n\n**Step 2: Choose a technology stack**\n\nOnce you have defined the requirements for your application, you need to choose a technology stack. This includes things like:\n\n* The programming language that you will use\n* The web server that you will use\n* The database that you will use\n* The real-time communication protocol that you will use\n\n**Step 3: Design the database**\n\nThe next step is to design the database for your application. This includes things like:\n\n* The tables that you will need\n* The columns that each table will have\n* The relationships between the tables\n\n**Step 4: Implement the application**\n\nOnce you have designed the database, you can start implementing the application. This includes things like:\n\n* Writing the code for the web server\n* Writing the code for the database\n* Writing the code for the real-time communication protocol\n\n**Step 5: Test the application**\n\nOnce you have implemented the application, you need to test it. This includes things like:\n\n* Testing the application with a small number of users\n* Testing the application with a large number of users\n* Testing the application under different conditions\n\n**Step 6: Deploy the application**\n\nOnce you have tested the application, you can deploy it. This includes things like:\n\n* Uploading the application to a web server\n* Configuring the web server\n* Configuring the database\n\n**Step 7: Monitor the application**\n\nOnce you have deployed the application, you need to monitor it. This includes things like:\n\n* Monitoring the performance of the application\n* Monitoring the security of the application\n* Monitoring the user experience"
+}
+```
+---
+### Request
+```json
+{
+  "uuid" : "1212",
+  "query" : "How to design a Cache System"
+}
+```
+
+### Response
+```json
+{
+  "response": "**Steps to Design a Cache System**\n\n1. **Determine the size of the cache.** The size of the cache will depend on the amount of data that needs to be cached and the performance requirements of the application.\n2. **Choose a cache design.** There are a number of different cache designs available, each with its own advantages and disadvantages. The most common cache design is the least recently used (LRU) cache.\n3. **Implement the cache system.** The cache system can be implemented in hardware or software.\n4. **Test the cache system.** The cache system should be tested to ensure that it is working correctly and that it is meeting the performance requirements of the application."
+}
+```
+
+## Note:
+The PDF file in the books folder is converted to vector data and stored in chromaDB using the ingest.py script.
