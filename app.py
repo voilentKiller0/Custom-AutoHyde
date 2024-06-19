@@ -13,8 +13,8 @@ from flask_cors import CORS
 import threading
 
 
-GOOGLE_API_KEY = "AIzaSyBFOkj3Cla3JGGYS1xDTEF6Uol3Mv-Jugc"
-os.environ["GOOGLE_API_KEY"] = "AIzaSyBFOkj3Cla3JGGYS1xDTEF6Uol3Mv-Jugc"
+GOOGLE_API_KEY = "XXXXX"
+os.environ["GOOGLE_API_KEY"] = "XXXXXX"
 
 app = Flask(__name__)
 CORS(app)
@@ -100,9 +100,6 @@ def process_json():
         if text == "":
             return jsonify({'error': 'Query is empty'}), 400
         
-        if not isinstance(uuid, str) or not isinstance(text, str):
-            return jsonify({'error': 'Invalid data type'}), 400
-        
         k = hypo_params['baseline_k'] * hypo_params['exploration_multiplier']
         
         docs = db.similarity_search_with_score(
@@ -147,6 +144,7 @@ def process_json():
         
         return jsonify({'response': response})
     except Exception as e:
+        print (e)
         return jsonify({'error': str(e)}), 400
 
 if __name__ == '__main__':
